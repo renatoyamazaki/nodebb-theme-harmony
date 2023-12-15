@@ -14,29 +14,6 @@
 				{./descriptionParsed}
 			</div>
 			{{{ end }}}
-			{{{ if !config.hideSubCategories }}}
-			{{{ if ./children.length }}}
-			<div class="category-children row row-cols-2 g-2 my-1 w-100">
-				{{{ each ./children }}}
-				{{{ if !./isSection }}}
-				<span class="category-children-item small">
-					{{{ if ./link }}}
-					<div class="d-flex align-items-start gap-1">
-						<i class="fa fa-fw fa-caret-right text-primary mt-1"></i>
-						<a href="{./link}" class="text-reset fw-semibold">{./name}</a>
-					</div>
-					{{{ else }}}
-					<div class="d-flex align-items-start gap-1">
-						<i class="fa fa-fw fa-caret-right text-primary mt-1"></i>
-						<a href="{config.relative_path}/category/{./slug}" class="text-reset fw-semibold">{./name}</a>
-					</div>
-					{{{ end }}}
-				</span>
-				{{{ end }}}
-				{{{ end }}}
-			</div>
-			{{{ end }}}
-			{{{ end }}}
 		</div>
 	</div>
 	{{{ if !./link }}}
